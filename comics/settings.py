@@ -12,15 +12,15 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
 
-from django.conf.global_settings import MEDIA_ROOT
+
+from django.conf.global_settings import MEDIA_ROOT, CSRF_TRUSTED_ORIGINS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load environment variables from .env file
-load_dotenv()
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -32,7 +32,8 @@ SECRET_KEY = 'django-insecure-l=46o2!qvj!h(ae-dxpvctbnvj*6^nojsy@k_v068z6i7=651c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["comicartists1-production.up.railway.app", "https://comicartists1-production.up.railway.app/"]
+CSRF_TRUSTED_ORIGINS = ["comicartists1-production.up.railway.app", "https://comicartists1-production.up.railway.app/"]
 
 
 # Application definition
@@ -101,7 +102,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'PASSWORD': os.environ['DB_PASSWORD_TS'],
         'HOST': 'metro.proxy.rlwy.net',
         'PORT': '59864',
     }
