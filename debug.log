@@ -24501,3 +24501,276 @@ DEBUG 10 2025-03-17 00:04:09 utils (0.085) SELECT "django_content_type"."id", "d
 DEBUG 10 2025-03-17 00:04:09 utils (0.125) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'payment' AND "django_content_type"."model" IN ('order', 'shippingaddress', 'orderitem')); args=('payment', 'order', 'shippingaddress', 'orderitem'); alias=default debug_sql 151
 DEBUG 10 2025-03-17 00:04:09 utils (0.083) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (11, 12, 13) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(11, 12, 13); alias=default debug_sql 151
 DEBUG 10 2025-03-17 00:04:09 utils (0.072) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'payment'; args=('payment',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:15:06 utils (0.090) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:15:06 utils (0.084) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:15:47 utils (0.076) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:15:48 utils (0.082) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:01 utils (0.083) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:01 utils (0.077) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:01 utils (0.098) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:01 utils (0.085) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:01 utils (0.075) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:01 utils (0.000) BEGIN; args=None; alias=default debug_transaction 181
+DEBUG 10 2025-03-17 00:17:01 utils (0.146) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('comicshop', '0018_alter_product_stock_number', '2025-03-17 00:17:01.421766+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('comicshop', '0018_alter_product_stock_number', datetime.datetime(2025, 3, 17, 0, 17, 1, 421766, tzinfo=datetime.timezone.utc)); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:01 utils (0.096) COMMIT; args=None; alias=default debug_transaction 181
+DEBUG 10 2025-03-17 00:17:01 utils (0.000) BEGIN; args=None; alias=default debug_transaction 181
+DEBUG 10 2025-03-17 00:17:01 utils (0.146) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('comicshop', '0019_alter_product_stock_number', '2025-03-17 00:17:01.673288+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('comicshop', '0019_alter_product_stock_number', datetime.datetime(2025, 3, 17, 0, 17, 1, 673288, tzinfo=datetime.timezone.utc)); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:01 utils (0.072) COMMIT; args=None; alias=default debug_transaction 181
+DEBUG 10 2025-03-17 00:17:01 utils (0.072) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.076) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.077) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.083) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.088) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.083) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.109) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('permission', 'user', 'group')); args=('auth', 'permission', 'user', 'group'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.076) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.120) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.072) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.070) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.070) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:02 utils (0.072) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.082) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.080) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.086) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.105) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.099) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'comicshop'; args=('comicshop',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.095) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'comicshop' AND "django_content_type"."model" IN ('customer', 'category', 'profile', 'product')); args=('comicshop', 'customer', 'category', 'profile', 'product'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.085) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10, 7); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.074) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'comicshop'; args=('comicshop',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.071) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'payment'; args=('payment',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.074) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'payment' AND "django_content_type"."model" IN ('order', 'shippingaddress', 'orderitem')); args=('payment', 'order', 'shippingaddress', 'orderitem'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:03 utils (0.073) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (11, 12, 13) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(11, 12, 13); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:04 utils (0.076) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'payment'; args=('payment',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:13 utils (0.085) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:13 utils (0.086) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:13 utils (0.081) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:13 utils (0.102) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:13 utils (0.079) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:13 utils (0.079) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:13 utils (0.075) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:13 utils (0.074) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:13 utils (0.075) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.082) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.083) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.076) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('permission', 'user', 'group')); args=('auth', 'permission', 'user', 'group'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.074) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.076) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.077) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.084) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.082) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.073) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.074) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.076) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:14 utils (0.075) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:15 utils (0.082) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:15 utils (0.088) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'comicshop'; args=('comicshop',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:15 utils (0.074) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'comicshop' AND "django_content_type"."model" IN ('profile', 'category', 'product', 'customer')); args=('comicshop', 'profile', 'category', 'product', 'customer'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:15 utils (0.082) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10, 7); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:15 utils (0.084) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'comicshop'; args=('comicshop',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:15 utils (0.075) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'payment'; args=('payment',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:15 utils (0.088) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'payment' AND "django_content_type"."model" IN ('orderitem', 'shippingaddress', 'order')); args=('payment', 'orderitem', 'shippingaddress', 'order'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:15 utils (0.090) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (11, 12, 13) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(11, 12, 13); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:15 utils (0.071) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'payment'; args=('payment',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:58 utils (0.088) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:17:58 utils (0.080) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:05 utils (0.074) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:06 utils (0.072) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:06 utils (0.076) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:06 utils (0.086) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:06 utils (0.082) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:06 utils (0.000) BEGIN; args=None; alias=default debug_transaction 181
+DEBUG 10 2025-03-17 00:18:06 utils (0.166) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('comicshop', '0020_alter_product_stock_number', '2025-03-17 00:18:06.311366+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('comicshop', '0020_alter_product_stock_number', datetime.datetime(2025, 3, 17, 0, 18, 6, 311366, tzinfo=datetime.timezone.utc)); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:06 utils (0.129) COMMIT; args=None; alias=default debug_transaction 181
+DEBUG 10 2025-03-17 00:18:06 utils (0.094) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:06 utils (0.073) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:06 utils (0.074) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:06 utils (0.073) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.073) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.088) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.088) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('permission', 'group', 'user')); args=('auth', 'permission', 'group', 'user'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.080) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.077) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.089) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.087) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.074) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.075) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.072) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.075) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.071) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:07 utils (0.077) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:08 utils (0.073) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'comicshop'; args=('comicshop',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:08 utils (0.080) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'comicshop' AND "django_content_type"."model" IN ('product', 'profile', 'category', 'customer')); args=('comicshop', 'product', 'profile', 'category', 'customer'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:08 utils (0.091) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10, 7); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:08 utils (0.084) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'comicshop'; args=('comicshop',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:08 utils (0.081) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'payment'; args=('payment',); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:08 utils (0.093) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'payment' AND "django_content_type"."model" IN ('shippingaddress', 'orderitem', 'order')); args=('payment', 'shippingaddress', 'orderitem', 'order'); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:08 utils (0.084) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (11, 12, 13) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(11, 12, 13); alias=default debug_sql 151
+DEBUG 10 2025-03-17 00:18:08 utils (0.073) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'payment'; args=('payment',); alias=default debug_sql 151

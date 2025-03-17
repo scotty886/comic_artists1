@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 class Order(models.Model):
-    logger.error(f'***** AN ERROR OCCURRED AT ORDER MODEL')
+    #logger.error(f'***** AN ERROR OCCURRED AT ORDER MODEL')
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     full_name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
@@ -31,7 +31,7 @@ class Order(models.Model):
 
 @receiver(pre_save, sender=Order)
 def set_shipping_date(sender, instance, **kwargs):
-    logger.error(f'***** AN ERROR OCCURRED AT: {instance}')
+    #logger.error(f'***** AN ERROR OCCURRED AT: {instance}')
     if instance.pk:
         now = datetime.datetime.now()
         ob = sender._default_manager.get(pk=instance.pk)
@@ -40,7 +40,7 @@ def set_shipping_date(sender, instance, **kwargs):
 
 
 class OrderItem(models.Model):
-    logger.error(f'***** AN ERROR OCCURRED AT ORDER ITEM MODEL')
+    #logger.error(f'***** AN ERROR OCCURRED AT ORDER ITEM MODEL')
     order = models.ForeignKey(Order, on_delete=models.CASCADE, null=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
@@ -49,7 +49,7 @@ class OrderItem(models.Model):
 
 
 class ShippingAddress(models.Model):
-    logger.error(f'***** AN ERROR OCCURRED AT SHIPPING ADDRESS MODEL')
+    #logger.error(f'***** AN ERROR OCCURRED AT SHIPPING ADDRESS MODEL')
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     shipping_full_name = models.CharField(max_length=255)
     shipping_email = models.CharField(max_length=255)
@@ -67,7 +67,7 @@ class ShippingAddress(models.Model):
         verbose_name_plural = 'Shipping Addresses'
 
 def create_shipping(sender, instance, created, **kwargs):
-    logger.error(f'***** AN ERROR OCCURRED AT: {instance}')
+    #logger.error(f'***** AN ERROR OCCURRED AT: {instance}')
     if created:
         user_shipping = ShippingAddress(user=instance)
         user_shipping.save()

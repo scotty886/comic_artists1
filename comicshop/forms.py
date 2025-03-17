@@ -8,31 +8,9 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-class AddProductForm(forms.ModelForm):
-    #logger.error('***** AN ERROR OCCURRED AT ADD PRODUCT FORM')
-    artist_name = forms.CharField(label="", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Artist Name'}))
-    #publisher = forms.CharField(label="", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Publisher'}))
-    publisher = forms.ModelChoiceField(queryset=Category.objects.all(), empty_label="Select Publisher", widget=forms.Select(attrs={'class': 'form-control'}))
-    comics = forms.CharField(label="", widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Comics'}))
-    work_link = forms.CharField(label="", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Work Link'}))
-    price = forms.CharField(label="", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Price'}))
-    image = forms.ImageField(label="", widget=forms.FileInput(attrs={'class': 'form-control'}))
-    image1 = forms.ImageField(label="", widget=forms.FileInput(attrs={'class': 'form-control'}), required=False)
-    image2 = forms.ImageField(label="", widget=forms.FileInput(attrs={'class': 'form-control'}), required=False)
-    image3 = forms.ImageField(label="", widget=forms.FileInput(attrs={'class': 'form-control'}), required=False)
-    image4 = forms.ImageField(label="", widget=forms.FileInput(attrs={'class': 'form-control'}), required=False)
-    image5 = forms.ImageField(label="", widget=forms.FileInput(attrs={'class': 'form-control'}), required=False)
-    image6 = forms.ImageField(label="", widget=forms.FileInput(attrs={'class': 'form-control'}), required=False)
-    image7 = forms.ImageField(label="", widget=forms.FileInput(attrs={'class': 'form-control'}), required=False)
-    image8 = forms.ImageField(label="", widget=forms.FileInput(attrs={'class': 'form-control'}), required=False)
-
-    class Meta:
-        model = Product
-        fields = ['artist_name', 'publisher', 'comics', 'work_link', 'price', 'image', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8']
-
 
 class ProductForm(forms.ModelForm):
-    logger.error('***** AN ERROR OCCURRED AT PRODUCT FORM')
+    #logger.error('***** AN ERROR OCCURRED AT PRODUCT FORM')
     artist_name = forms.CharField(label="", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Artist Name'}))
     #publisher = forms.CharField(label="", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Publisher'}))
     publisher = forms.ModelChoiceField(queryset=Category.objects.all(), empty_label="Select Publisher", widget=forms.Select(attrs={'class': 'form-control'}))

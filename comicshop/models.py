@@ -30,9 +30,8 @@ def create_profile(sender, instance, created, **kwargs):
 post_save.connect(create_profile, sender=User)
 
 class Category(models.Model):
-
     name = models.CharField(max_length=50)
-    logger.error(f'***** AN ERROR OCCURED at CATEGORY MODEL')
+    #logger.error(f'***** AN ERROR OCCURED at CATEGORY MODEL')
     def __str__(self):
         return self.name
     class Meta:
@@ -51,7 +50,7 @@ class Customer(models.Model):
         return f'{self.first_name} {self.last_name}'
 
 class Product(models.Model):
-    logger.error(f'***** AN ERROR OCCURED at PRODUCT MODEL')
+    #logger.error(f'***** AN ERROR OCCURED at PRODUCT MODEL')
     artist_name = models.CharField(max_length=50)
     publisher = models.ForeignKey(Category, on_delete=models.CASCADE)
     comics = models.TextField()
