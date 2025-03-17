@@ -36,7 +36,7 @@ ALLOWED_HOSTS = ["comicartists1-production.up.railway.app", "https://comicartist
 # settings.py
 
 # Add the trusted origin to the CSRF_TRUSTED_ORIGINS setting
-CSRF_TRUSTED_ORIGINS = ["comicartists1-production.up.railway.app", "https://comicartists1-production.up.railway.app/"]
+CSRF_TRUSTED_ORIGINS = ["https://comicartists1-production.up.railway.app/"]
 
 # Ensure that DEBUG is set to False in production
 DEBUG = False
