@@ -27,8 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l=46o2!qvj!h(ae-dxpvctbnvj*6^nojsy@k_v068z6i7=651c'
-#SECRET_KEY = os.environ['SECRET_KEY_TS']
+#SECRET_KEY = 'django-insecure-l=46o2!qvj!h(ae-dxpvctbnvj*6^nojsy@k_v068z6i7=651c'
+SECRET_KEY = os.environ['SECRET_KEY_TS']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -109,8 +109,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'VhSeZjWHiTaXdaySVxYktFtDqUebzVfp',
-        #'PASSWORD': os.environ['DB_PASSWORD_TS'],
+        #'PASSWORD': 'VhSeZjWHiTaXdaySVxYktFtDqUebzVfp',
+        'PASSWORD': os.environ['DB_PASSWORD_TS'],
         'HOST': 'metro.proxy.rlwy.net',
         'PORT': '59864',
     }
@@ -152,13 +152,29 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [BASE_DIR / "static"]
+
+
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+MEDIA_ROOT = BASE_DIR / "media"
+
+
+
 
 # White noise static storage
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 # Default primary key field type
