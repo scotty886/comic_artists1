@@ -66,6 +66,9 @@ class Product(models.Model):
     image6 = models.ImageField(upload_to='uploads/products', null=True, blank=True)
     image7 = models.ImageField(upload_to='uploads/products', null=True, blank=True)
     image8 = models.ImageField(upload_to='uploads/products', null=True, blank=True)
+
+    def __str__(self):
+        return f'{self.artist_name} - {self.publisher}'
     
     
 

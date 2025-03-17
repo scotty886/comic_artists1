@@ -27,8 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-l=46o2!qvj!h(ae-dxpvctbnvj*6^nojsy@k_v068z6i7=651c'
-SECRET_KEY = os.environ['SECRET_KEY_TS']
+SECRET_KEY = 'django-insecure-l=46o2!qvj!h(ae-dxpvctbnvj*6^nojsy@k_v068z6i7=651c'
+#SECRET_KEY = os.environ['SECRET_KEY_TS']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,7 +40,7 @@ ALLOWED_HOSTS = [ "dominion13.com", "https://dominion13.com" ,"comicartists1-pro
 CSRF_TRUSTED_ORIGINS = ["https://dominion13.com", "https://comicartists1-production.up.railway.app"]
 
 # Ensure that DEBUG is set to False in production
-DEBUG = False
+DEBUG = True
 
 
 # Application definition
@@ -109,8 +109,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        #'PASSWORD': 'VhSeZjWHiTaXdaySVxYktFtDqUebzVfp',
-        'PASSWORD': os.environ['DB_PASSWORD_TS'],
+        'PASSWORD': 'VhSeZjWHiTaXdaySVxYktFtDqUebzVfp',
+        #'PASSWORD': os.environ['DB_PASSWORD_TS'],
         'HOST': 'metro.proxy.rlwy.net',
         'PORT': '59864',
     }
