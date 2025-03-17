@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-l=46o2!qvj!h(ae-dxpvctbnvj*6^nojsy@k_v068z6i7=651c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["comicartists1-production.up.railway.app", "https://comicartists1-production.up.railway.app/"]
 CSRF_TRUSTED_ORIGINS = [ "https://comicartists1-production.up.railway.app/"]
@@ -102,6 +102,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
+        #'PASSWORD': 'VhSeZjWHiTaXdaySVxYktFtDqUebzVfp',
         'PASSWORD': os.environ['DB_PASSWORD_TS'],
         'HOST': 'metro.proxy.rlwy.net',
         'PORT': '59864',

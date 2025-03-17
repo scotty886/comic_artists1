@@ -52,8 +52,8 @@ def product_entry(request):
             messages.error(request, 'An error occurred during product entry. Try again')
             return redirect('product_entry')
     else:
-        context = {'p_form': p_form}
-        return render(request, 'product_entry.html', context)
+        #context = {'p_form': p_form}
+        return render(request, 'product_entry.html', {'p_form': p_form})
 
 def categories(request, foo):
     #logger.error(f'***** AN ERROR OCCURRED AT: {request.path}')
@@ -66,8 +66,8 @@ def categories(request, foo):
         print('TESTING CATEGORY!!!!')
         print(category)
         products = Product.objects.filter(publisher=category)
-        context = {'products': products, 'category': category}
-        return render(request, 'categories.html', context)
+        #context = {'products': products, 'category': category}
+        return render(request, 'categories.html', {'products': products, 'category': category})
     except:
         messages.success(request, 'That publisher does not exist')
         return redirect('home')
@@ -87,11 +87,9 @@ def search(request):
             print('TESTING SEARCH - RESULTS!!!!')
             print('TESTING SEARCH - RESULTS!!!!')
             print(results)
-            context = {'results': results}
-            return render(request, 'search.html', context)
+            return render(request, 'search.html', {'results': results})
     else:
-        context = {}
-        return render(request, 'search.html', context)
+        return render(request, 'search.html')
 
 ########################### PROFILE, LOGIN, LOGOUT, UPDATES VIEWS #######################################
 
@@ -144,8 +142,7 @@ def register_user(request):
             messages.error(request, 'An error occurred during registration. Try again')
             return redirect('register')
     else:
-        context = {'form': form}
-        return render(request, 'register.html', context)
+        return render(request, 'register.html', {'form': form})
 
 def update_user(request):
     #logger.error(f'***** AN ERROR OCCURRED AT UPDATE USER: {request.path}')
@@ -176,8 +173,7 @@ def update_password(request):
                 return redirect('update_user')
         else:
             form = ChangePasswordForm(current_user)
-            context = {'form': form}
-            return render(request, 'update_password.html', context)
+            return render(request, 'update_password.html', {'form': form})
     else:
         messages.error(request, 'You must be logged in to update your password')
         return redirect('home')
