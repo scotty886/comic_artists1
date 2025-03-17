@@ -32,11 +32,11 @@ SECRET_KEY = 'django-insecure-l=46o2!qvj!h(ae-dxpvctbnvj*6^nojsy@k_v068z6i7=651c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["comicartists1-production.up.railway.app", "https://comicartists1-production.up.railway.app/"]
+ALLOWED_HOSTS = ["comicartists1-production.up.railway.app", "https://comicartists1-production.up.railway.app"]
 # settings.py
 
 # Add the trusted origin to the CSRF_TRUSTED_ORIGINS setting
-CSRF_TRUSTED_ORIGINS = ["https://comicartists1-production.up.railway.app/"]
+CSRF_TRUSTED_ORIGINS = ["https://comicartists1-production.up.railway.app"]
 
 # Ensure that DEBUG is set to False in production
 DEBUG = False
